@@ -18,19 +18,23 @@ const tabs: { id: MenuCategory; label: string }[] = [
 export default function MenuTabs({ activeTab, onTabChange }: MenuTabsProps) {
   return (
     <div className="flex flex-wrap justify-center gap-4 mb-6">
-      {tabs.map((tab) => (
-        <button
-          key={tab.id}
-          onClick={() => onTabChange(tab.id)}
-          className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${
-            activeTab === tab.id
-              ? 'bg-slate-800 text-white'
-              : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
-          }`}
-        >
-          {tab.label}
-        </button>
-      ))}
+      {tabs.map((tab) => {
+        const active = activeTab === tab.id;
+        return (
+          <button
+            key={tab.id}
+            onClick={() => onTabChange(tab.id)}
+            className={`px-3 py-2 rounded-full text-sm font-medium transition-colors`}
+            style={
+              active
+                ? { background: 'var(--primary)', color: 'white' }
+                : { background: 'var(--aqua-1)', color: 'var(--primary)' }
+            }
+          >
+            {tab.label}
+          </button>
+        );
+      })}
     </div>
   );
 }
