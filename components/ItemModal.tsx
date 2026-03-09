@@ -18,15 +18,21 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
 
       <div className="relative bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 h-3/4 overflow-hidden z-50 flex">
         {/* Left: image area */}
-        <div className="w-1/2 bg-black flex items-center justify-center overflow-hidden relative" style={{ minWidth: 320 }}>
+        <div className="w-1/2 bg-black flex items-center justify-center overflow-auto relative" style={{ minWidth: 320 }}>
           {item.image ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={item.image}
               alt={item.name}
               onClick={() => setZoomed((s) => !s)}
-              className={`transition-transform duration-300 w-full h-full ${zoomed ? 'transform scale-150 cursor-zoom-out' : 'cursor-zoom-in'}`}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              decoding="async"
+              loading="eager"
+              className={`transition-all duration-300 ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+              style={
+                zoomed
+                  ? { width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }
+                  : { width: '100%', height: '100%', objectFit: 'cover' }
+              }
             />
           ) : (
             <div className="text-white p-4">No image</div>
