@@ -12,7 +12,7 @@ const tabs: { id: MenuCategory; label: string }[] = [
   { id: 'cheesecakes', label: 'Cheesecakes' },
   { id: 'cupcakes', label: 'Cupcakes & Individual Desserts' },
   { id: 'brownies', label: 'Brownies & Bars' },
-  { id: 'cookies', label: 'Cookies & Baked Goods' },
+  { id: 'cookies', label: 'Cookies & Muffins' },
 ];
 
 export default function MenuTabs({ activeTab, onTabChange }: MenuTabsProps) {
