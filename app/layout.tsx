@@ -24,6 +24,44 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              name: "Crumb & Craft",
+              url: "https://crumbandcraft.net",
+              servesCuisine: ["Desserts", "Pasta", "Pastries"],
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Quezon City",
+                addressRegion: "Metro Manila",
+                addressCountry: "PH",
+              },
+               "areaServed": [
+                {
+                  "@type": "Place",
+                  "name": "Commonwealth, Quezon City"
+                },
+                {
+                  "@type": "City",
+                  "name": "Quezon City"
+                },
+                {
+                  "@type": "City",
+                  "name": "Manila"
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  "name": "Metro Manila"
+                }
+              ]
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

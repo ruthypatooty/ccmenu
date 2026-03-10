@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { MenuItem as MenuItemType } from '@/data/menuData';
 import ItemModal from './ItemModal';
