@@ -27,7 +27,7 @@ export default function Home() {
           </div>
 
           <h2 className="text-3xl font-bold" style={{ color: 'var(--primary)' }}>
-            CC Menu
+            Welcome to Crumb & Craft Homemade Goods
           </h2>
           <p style={{ color: 'var(--muted)' }}>Freshly baked selections — choose a category below.</p>
         </header>
