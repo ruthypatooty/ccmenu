@@ -154,9 +154,16 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4" aria-modal="true">
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
 
-      <div className="relative z-50 flex h-[92vh] w-[95vw] max-w-5xl overflow-hidden rounded-lg bg-white shadow-lg flex-col md:flex-row md:h-3/4 md:w-3/4 lg:w-2/3">
+      <div
+        className="relative z-50 flex h-[92vh] w-[95vw] max-w-5xl overflow-hidden rounded-lg shadow-lg flex-col md:flex-row md:h-3/4 md:w-3/4 lg:w-2/3"
+        style={{
+          backgroundImage: `url('/MODALBG1.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         {/* Left: image area (mobile: top, desktop: left) */}
-        <div className="relative flex h-[42%] w-full items-center justify-center overflow-auto bg-black md:h-full md:w-1/2">
+        <div className="relative flex h-[42%] w-full items-center justify-center overflow-auto bg-transparent md:h-full md:w-1/2">
           {item.image ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -175,22 +182,23 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
           ) : (
             <div className="text-white p-4">No image</div>
           )}
+          <button
+            aria-label="Close"
+            onClick={onClose}
+            className="absolute top-4 left-4 z-20 rounded-full p-2 bg-[#ebe3d1] hover:bg-[#dfd6c4]"
+          >
+            ✕
+          </button>
         </div>
 
         {/* Right: details */}
         <div
-          className="relative h-[58%] w-full overflow-auto p-4 md:h-full md:w-1/2 md:p-6"
-          style={{ background: 'var(--primary)', color: 'white' }}
+          className="relative h-[58%] w-full overflow-auto p-4 pb-8 md:h-full md:w-1/2 md:p-6 md:pb-12"
+          style={{ background: 'rgba(9,84,90,0.78)', color: 'white' }}
         >
-          <button
-            aria-label="Close"
-            onClick={onClose}
-            className="absolute top-4 right-4 rounded-full p-2 bg-[#ebe3d1] hover:bg-[#dfd6c4]"
-          >
-            ✕
-          </button>
+ 
 
-          <div className="h-full flex flex-col items-start">
+          <div className="h-full flex flex-col items-start pb-8 md:pb-12">
             <div className="w-full pr-10">
               <h3 className="text-3xl font-light leading-tight" style={{ fontFamily: 'var(--font-serif)', color: 'white' }}>
                 {item.name}
@@ -307,7 +315,7 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
               </p>
             </section>
 
-            <div className="h-4" />
+            <div className="h-16 w-full" />
           </div>
         </div>
       </div>
