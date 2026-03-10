@@ -127,6 +127,7 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
   const [optionsOpen, setOptionsOpen] = useState(false);
   const optionsRef = useRef<HTMLDivElement | null>(null);
   const isMobile = typeof navigator !== 'undefined' && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const fbAccount = process.env.NEXT_PUBLIC_BUSINESS_FB_ACCOUNT;
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -227,7 +228,7 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
                           <button
                             onClick={() => {
                               const inquiryText = `Hi! I want to inquire about ${item.name}`;
-                              const messengerUrl = `https://m.me/mmmicheru?ref=order_inquiry&text=${encodeURIComponent(inquiryText)}`;
+                              const messengerUrl = `https://m.me/${fbAccount}?ref=order_inquiry&text=${encodeURIComponent(inquiryText)}`;
                               window.open(messengerUrl, '_blank', 'noopener');
                               setOptionsOpen(false);
                               onClose();
@@ -258,7 +259,7 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
                   </div>
                 ) : (
                   <a
-                    href={`https://m.me/mmmicheru?ref=order_inquiry&text=${encodeURIComponent(`Hi! I want to inquire about ${item.name}`)}`}
+                    href={`https://m.me/${fbAccount}?ref=order_inquiry&text=${encodeURIComponent(`Hi! I want to inquire about ${item.name}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block rounded-full px-4 py-2 font-medium shadow-sm bg-white"
