@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 type Props = { searchParams?: Promise<{ category?: string }> };
 
-const validTabs = ['cakes','cheesecakes','cupcakes','brownies','cookies','pasta'] as const;
+const validTabs = ['cakes','cheesecakes','cupcakes','brownies','cookies','main_dish','pasta'] as const;
 
 export default async function CakesPage({ searchParams }: Props) {
   const params = await searchParams;

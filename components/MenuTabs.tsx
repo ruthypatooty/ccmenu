@@ -11,6 +11,7 @@ const tabs: { id: MenuCategory; label: string }[] = [
   { id: 'cakes', label: 'Cakes' },
   { id: 'cheesecakes', label: 'Cheesecakes' },
   { id: 'cupcakes', label: 'Cupcakes & Individual Desserts' },
+  { id: 'main_dish', label: 'Main dish' },
   { id: 'pasta', label: 'Pasta' },
   { id: 'brownies', label: 'Brownies & Bars' },
   { id: 'cookies', label: 'Cookies & Muffins' },
