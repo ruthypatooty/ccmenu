@@ -13,8 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Crumb & Craft Menu",
-  description: "Homemade Goodness for Everyone",
+  metadataBase: new URL('https://crumbandcraft.net'),
+  title: {
+    default: 'Crumb & Craft Menu',
+    template: '%s | Crumb & Craft',
+  },
+  description: 'Homemade Goodness for Everyone',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
 };
 
 export default function RootLayout({
