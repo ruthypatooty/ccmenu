@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { menuData, MenuCategory } from '@/data/menuData';
 import MenuTabs from '@/components/MenuTabs';
 import MenuList from '@/components/MenuList';
@@ -19,13 +18,19 @@ type Props = { defaultTab: MenuCategory };
 
 export default function MenuPageClient({ defaultTab }: Props) {
   const [activeTab, setActiveTab] = useState<MenuCategory>(defaultTab);
-  const router = useRouter();
+
+  function buildTabUrl(tab: MenuCategory) {
+    return `${tabToUrl[tab]}?category=${encodeURIComponent(tab)}`;
+  }
 
   function handleTabChange(tab: MenuCategory) {
     setActiveTab(tab);
-    // push the grouped route but include the specific category as a query param
-    // so the server page can render the correct default tab
-    router.push(`${tabToUrl[tab]}?category=${encodeURIComponent(tab)}`, { scroll: false });
+
+    // Update URL synchronously to avoid race conditions from rapid router transitions.
+    const nextUrl = buildTabUrl(tab);
+    if (window.location.pathname + window.location.search !== nextUrl) {
+      window.history.pushState({}, '', nextUrl);
+    }
   }
 
   return (
