@@ -6,12 +6,13 @@ export const metadata: Metadata = {
   description: 'Indulge in our freshly baked brownies, bars, cookies and muffins — homemade goodness in every bite.',
 };
 
-type Props = { searchParams?: { category?: string } };
+type Props = { searchParams?: Promise<{ category?: string }> };
 
 const validTabs = ['cakes','cheesecakes','cupcakes','brownies','cookies','pasta'] as const;
 
-export default function DessertsPage({ searchParams }: Props) {
-  const cat = (searchParams?.category || '').toString();
+export default async function DessertsPage({ searchParams }: Props) {
+  const params = await searchParams;
+  const cat = (params?.category || '').toString();
   const defaultTab = validTabs.includes(cat as any) ? (cat as any) : 'brownies';
   return <MenuPageClient defaultTab={defaultTab} />;
 }
