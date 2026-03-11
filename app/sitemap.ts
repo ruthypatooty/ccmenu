@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next'
 
 const BASE = 'https://crumbandcraft.net'
-const LAST_MODIFIED = new Date('2026-03-11')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
+    '/',
     '/menu',
     '/cakes',
     '/desserts',
@@ -13,8 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return pages.map(page => ({
     url: `${BASE}${page}`,
-    lastModified: LAST_MODIFIED,
+    lastModified: new Date().toISOString(),
     changeFrequency: 'weekly',
-    priority: page === '/menu' ? 1 : 0.8,
+    priority: page === '/' ? 1 : 0.8,
   }))
 }
