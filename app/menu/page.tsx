@@ -79,8 +79,9 @@ function categoryMetadata(category: string | undefined): Metadata {
   } as Metadata;
 }
 
-export async function generateMetadata({ searchParams }: { searchParams?: { category?: string } }) {
-  const cat = (searchParams?.category || '').toString();
+export async function generateMetadata({ searchParams }: { searchParams?: Promise<{ category?: string }> }) {
+  const params = await searchParams;
+  const cat = (params?.category || '').toString();
   const chosen = validTabs.includes(cat as any) ? cat : 'cakes';
   return categoryMetadata(chosen);
 }

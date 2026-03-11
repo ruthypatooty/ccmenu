@@ -36,9 +36,7 @@ export default function MenuItem({ item }: MenuItemProps) {
             </div>
           </div>
 
-          {item.description ? (
-            <div className="text-sm mt-2" style={{ color: 'var(--muted)' }}>{item.description}</div>
-          ) : null}
+          {/* description intentionally omitted here — details shown in modal */}
         </div>
       </div>
 
