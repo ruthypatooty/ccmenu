@@ -9,6 +9,7 @@ const tabToUrl: Record<MenuCategory, string> = {
   cakes: '/cakes',
   cheesecakes: '/cakes',
   cupcakes: '/cakes',
+  main_dish: '/mains',
   pasta: '/pasta',
   brownies: '/desserts',
   cookies: '/desserts',

@@ -2,6 +2,8 @@ export type MenuItem = {
   name: string;
   price: string;
   description?: string;
+  ingredients?: string[];
+  pairing?: string;
   image?: string;
 };
 
@@ -11,6 +13,7 @@ export type MenuCategory =
   | 'cupcakes'
   | 'brownies'
   | 'cookies'
+  | 'main_dish'
   | 'pasta';
 
 export const menuData: Record<MenuCategory, MenuItem[]> = {
@@ -81,5 +84,80 @@ export const menuData: Record<MenuCategory, MenuItem[]> = {
     { name: 'Double Chocolate Muffins', price: '₱600.00', image: '/menu/Double_Chocolate_Muffins-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Banana Walnut Muffins', price: '₱600.00', image: '/menu/Banana_Walnut_Muffins-qc-quezoncity-commonwealth-manila.jpg' }
   ],
-  pasta: [],
+  pasta: [
+    {
+      name: 'Truffle Pasta',
+      price: '₱780.00',
+      description: 'Creamy pasta tossed in black truffle sauce with a rich, earthy finish and parmesan on top.',
+      ingredients: ['Fettuccine pasta', 'Black truffle cream sauce', 'Parmesan cheese', 'Garlic confit'],
+      pairing: 'Best paired with sparkling water with lemon or an iced latte.',
+      image: '/menu/Chelles_Creamy_Black_Truffle_Pasta-qc-quezoncity-commonwealth-manila.jpg',
+    },
+    {
+      name: 'Seafood Marinara',
+      price: '₱710.00',
+      description: 'Tomato-based marinara loaded with shrimp, mussels, and squid, simmered with herbs and olive oil.',
+      ingredients: ['Spaghetti pasta', 'Shrimp and mussels', 'Squid rings', 'Marinara sauce'],
+      pairing: 'Great with chilled citrus soda or a light white grape drink.',
+      image: '/menu/Seafood_Marinara-qc-quezoncity-commonwealth-manila.jpg',
+    },
+    {
+      name: 'Spaghetti Meatballs',
+      price: '₱710.00',
+      description: 'Classic spaghetti in slow-cooked tomato sauce topped with juicy beef meatballs and fresh basil.',
+      ingredients: ['Spaghetti pasta', 'Beef meatballs', 'Tomato herb sauce', 'Grated parmesan'],
+      pairing: 'Perfect with iced tea, cola, or cold brew coffee.',
+      image: '/menu/Spaghetti_Meatballs-qc-quezoncity-commonwealth-manila.jpg',
+    },
+    {
+      name: 'Lasagna',
+      price: '₱880.00',
+      description: 'Layered pasta sheets with savory meat sauce, creamy bechamel, and three-cheese topping baked until golden.',
+      ingredients: ['Lasagna sheets', 'Beef ragu', 'Bechamel sauce', 'Mozzarella and parmesan'],
+      pairing: 'Pairs nicely with lemonade, house blend iced tea, or sparkling apple juice.',
+      image: '/menu/3-Cheese_Lasagna-qc-quezoncity-commonwealth-manila.jpg',
+    },
+    {
+      name: 'Cheesy Penne',
+      price: '₱710.00',
+      description: 'Oven-baked penne in creamy tomato sauce with a generous cheesy melt and toasted herb crumbs.',
+      ingredients: ['Penne pasta', 'Creamy tomato sauce', 'Cheddar and mozzarella', 'Herb bread crumbs'],
+      pairing: 'Best enjoyed with iced mocha, peach tea, or calamansi juice.',
+      image: '/menu/Cheesy_Baked_Penne-qc-quezoncity-commonwealth-manila.jpg',
+    },
+  ],
+  main_dish: [
+    {
+      name: 'Seafood Boil',
+      price: '₱890.00',
+      description: 'A generous seafood boil with prawns, mussels, and crab tossed in aromatic butter and spices.',
+      ingredients: ['Prawns', 'Mussels', 'Crab', 'Garlic butter broth'],
+      pairing: 'Pairs well with chilled soda or a light sparkling drink.',
+      image: '/menu/Chelles_Special_Seafood_Boil-qc-quezoncity-commonwealth-manila.jpg',
+    },
+    {
+      name: 'Hickory Ribs',
+      price: '₱950.00',
+      description: 'Slow-cooked pork ribs glazed with a smoky hickory barbecue sauce and finished on the grill.',
+      ingredients: ['Pork ribs', 'Hickory barbecue glaze', 'Smoked spices'],
+      pairing: 'Enjoy with iced tea, cola, or a cold craft soda.',
+      image: '/menu/Hickory_Pork_Ribs-qc-quezoncity-commonwealth-manila.jpg',
+    },
+    {
+      name: 'Chicken Cordon',
+      price: '₱750.00',
+      description: 'Breaded chicken stuffed with ham and cheese, served with creamy garlic sauce.',
+      ingredients: ['Chicken breast', 'Ham', 'Melted cheese', 'Creamy garlic sauce'],
+      pairing: 'Served best with lemonade or a light iced coffee.',
+      image: '/menu/Chicken_Cordon_Bleu_with_Creamy_Garlic_Sauce-qc-quezoncity-commonwealth-manila.jpg',
+    },
+    {
+      name: 'Roast Beef',
+      price: '₱920.00',
+      description: 'Tender roast beef carved and served with pan jus and roasted root vegetables.',
+      ingredients: ['Beef roast', 'Pan jus', 'Roasted vegetables'],
+      pairing: 'Pairs nicely with house iced tea or sparkling apple juice.',
+      image: '/menu/Chelles_Special_Roast_Beef-qc-quezoncity-commonwealth-manila.jpg',
+    },
+  ],
 };

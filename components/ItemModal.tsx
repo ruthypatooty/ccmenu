@@ -147,7 +147,12 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
       document.removeEventListener('keydown', handleKey);
     };
   }, []);
-  const story = buildProductStory(item.name);
+  const fallbackStory = buildProductStory(item.name);
+  const story: ProductStory = {
+    description: item.description || fallbackStory.description,
+    ingredients: item.ingredients && item.ingredients.length > 0 ? item.ingredients : fallbackStory.ingredients,
+    pairing: item.pairing || fallbackStory.pairing,
+  };
 
   if (!isOpen) return null;
 
