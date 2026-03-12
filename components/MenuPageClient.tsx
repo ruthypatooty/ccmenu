@@ -21,7 +21,18 @@ export default function MenuPageClient({ defaultTab }: Props) {
   const [activeTab, setActiveTab] = useState<MenuCategory>(defaultTab);
 
   function buildTabUrl(tab: MenuCategory) {
-    return `${tabToUrl[tab]}?category=${encodeURIComponent(tab)}`;
+    const base = tabToUrl[tab];
+    const isCanonicalTab =
+      tab === 'cakes' ||
+      tab === 'brownies' ||
+      tab === 'main_dish' ||
+      tab === 'pasta';
+
+    if (isCanonicalTab) {
+      return base;
+    }
+
+    return `${base}?category=${encodeURIComponent(tab)}`;
   }
 
   function handleTabChange(tab: MenuCategory) {

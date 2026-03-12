@@ -4,6 +4,16 @@ import MenuPageClient from '@/components/MenuPageClient';
 export const metadata: Metadata = {
   title: 'Cakes, Cheesecakes & Cupcakes | Crumb & Craft',
   description: 'Explore our handcrafted cakes, creamy cheesecakes and cupcakes — baked fresh with love.',
+  openGraph: {
+    title: 'Cakes, Cheesecakes & Cupcakes | Crumb & Craft',
+    description: 'Explore our handcrafted cakes, creamy cheesecakes and cupcakes — baked fresh with love.',
+    url: 'https://crumbandcraft.net/cakes',
+    siteName: 'Crumb & Craft',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://crumbandcraft.net/cakes',
+  },
 };
 
 type Props = { searchParams?: Promise<{ category?: string }> };

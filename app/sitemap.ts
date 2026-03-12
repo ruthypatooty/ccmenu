@@ -4,11 +4,9 @@ const BASE = 'https://crumbandcraft.net'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
-    '/',
-    '/menu',
-    '/mains',
     '/cakes',
     '/desserts',
+    '/mains',
     '/pasta',
   ]
 
