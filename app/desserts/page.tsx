@@ -4,6 +4,16 @@ import MenuPageClient from '@/components/MenuPageClient';
 export const metadata: Metadata = {
   title: 'Brownies, Bars & Cookies | Crumb & Craft',
   description: 'Indulge in our freshly baked brownies, bars, cookies and muffins — homemade goodness in every bite.',
+  openGraph: {
+    title: 'Brownies, Bars & Cookies | Crumb & Craft',
+    description: 'Indulge in our freshly baked brownies, bars, cookies and muffins — homemade goodness in every bite.',
+    url: 'https://crumbandcraft.net/desserts',
+    siteName: 'Crumb & Craft',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://crumbandcraft.net/desserts',
+  },
 };
 
 type Props = { searchParams?: Promise<{ category?: string }> };
