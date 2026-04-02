@@ -2,17 +2,17 @@ import type { Metadata } from 'next';
 import MenuPageClient from '@/components/MenuPageClient';
 
 export const metadata: Metadata = {
-  title: 'Brownies, Bars & Cookies | Crumb & Craft',
+  title: "Brownies, Bars & Cookies | Chelle's",
   description: 'Indulge in our freshly baked brownies, bars, cookies and muffins — homemade goodness in every bite.',
   openGraph: {
-    title: 'Brownies, Bars & Cookies | Crumb & Craft',
+    title: "Brownies, Bars & Cookies | Chelle's",
     description: 'Indulge in our freshly baked brownies, bars, cookies and muffins — homemade goodness in every bite.',
-    url: 'https://crumbandcraft.net/desserts',
-    siteName: 'Crumb & Craft',
+    url: 'https://chelles.net/desserts',
+    siteName: "Chelle's",
     type: 'website',
   },
   alternates: {
-    canonical: 'https://crumbandcraft.net/desserts',
+    canonical: 'https://chelles.net/desserts',
   },
 };
 

@@ -3,17 +3,17 @@ import MenuPageClient from '@/components/MenuPageClient';
 import { menuData } from '@/data/menuData';
 
 export const metadata: Metadata = {
-  title: 'Pasta | Crumb & Craft',
+  title: "Pasta | Chelle's",
   description: 'Explore our pasta favorites, from truffle cream to baked classics.',
   openGraph: {
-    title: 'Pasta | Crumb & Craft',
+    title: "Pasta | Chelle's",
     description: 'Explore our pasta favorites, from truffle cream to baked classics.',
-    url: 'https://crumbandcraft.net/pasta',
-    siteName: 'Crumb & Craft',
+    url: 'https://chelles.net/pasta',
+    siteName: "Chelle's",
     type: 'website',
     images: [
       {
-        url: 'https://crumbandcraft.net/menu/Chelles_Creamy_Black_Truffle_Pasta-qc-quezoncity-commonwealth-manila.jpg',
+        url: 'https://chelles.net/menu/Chelles_Creamy_Black_Truffle_Pasta-qc-quezoncity-commonwealth-manila.jpg',
         width: 1200,
         height: 630,
         alt: 'Truffle Pasta',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://crumbandcraft.net/pasta',
+    canonical: 'https://chelles.net/pasta',
   },
 };
 
@@ -37,7 +37,7 @@ export default async function PastaPage({ searchParams }: Props) {
   const items = menuData.pasta.map((it) => ({
     name: it.name,
     description: it.description || '',
-    image: it.image ? `https://crumbandcraft.net${it.image}` : undefined,
+    image: it.image ? `https://chelles.net${it.image}` : undefined,
     price: it.price ? it.price.replace(/[^0-9.]/g, '') : undefined,
   }));
 

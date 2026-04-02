@@ -37,7 +37,7 @@ body {
 
 /* --- Typography specific rules requested --- */
 
-/* Main Header (Crumb & Craft) — target the actual header h2 in the page */
+/* Main Header (chelles) — target the actual header h2 in the page */
 .hero header h2,
 .hero header h1 {
   font-family: var(--font-serif);

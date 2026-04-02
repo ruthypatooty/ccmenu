@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://crumbandcraft.net'),
+  metadataBase: new URL('https://chelles.net'),
   title: {
-    default: 'Crumb & Craft Menu',
-    template: '%s | Crumb & Craft',
+    default: "Chelle's Menu",
+    template: "%s | Chelle's",
   },
   description: 'Homemade Goodness for Everyone',
   robots: {
@@ -46,8 +46,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Restaurant",
-              name: "Crumb & Craft",
-              url: "https://crumbandcraft.net",
+              name: "Chelle's",
+              url: "https://chelles.net",
               servesCuisine: ["Desserts", "Pasta", "Pastries"],
               address: {
                 "@type": "PostalAddress",
