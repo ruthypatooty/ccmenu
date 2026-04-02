@@ -2,17 +2,17 @@ import type { Metadata } from 'next';
 import MenuPageClient from '@/components/MenuPageClient';
 
 export const metadata: Metadata = {
-  title: 'Cakes, Cheesecakes & Cupcakes | Crumb & Craft',
+  title: "Cakes, Cheesecakes & Cupcakes | Chelle's",
   description: 'Explore our handcrafted cakes, creamy cheesecakes and cupcakes — baked fresh with love.',
   openGraph: {
-    title: 'Cakes, Cheesecakes & Cupcakes | Crumb & Craft',
+    title: "Cakes, Cheesecakes & Cupcakes | Chelle's",
     description: 'Explore our handcrafted cakes, creamy cheesecakes and cupcakes — baked fresh with love.',
-    url: 'https://crumbandcraft.net/cakes',
-    siteName: 'Crumb & Craft',
+    url: 'https://chelles.net/cakes',
+    siteName: "Chelle's",
     type: 'website',
   },
   alternates: {
-    canonical: 'https://crumbandcraft.net/cakes',
+    canonical: 'https://chelles.net/cakes',
   },
 };
 

@@ -51,8 +51,7 @@ export default function MenuPageClient({ defaultTab }: Props) {
         <header className="mb-6">
           <div className="relative overflow-hidden mb-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/menu/landing2-qc-quezoncity-commonwealth-manila.png" alt="Hero" className="w-full h-72 md:h-96 object-cover" />
-            <div className="absolute inset-0 pointer-events-none" style={{
+            <img src="/menu/newchelles.png" alt="Hero" className="w-full h-90 md:h-100 object-cover object-[center_30%]" />            <div className="absolute inset-0 pointer-events-none" style={{
               background: `
                 linear-gradient(to top,    var(--bg) 0%, transparent 15%),
                 linear-gradient(to bottom, var(--bg) 0%, transparent 15%),
@@ -63,7 +62,7 @@ export default function MenuPageClient({ defaultTab }: Props) {
           </div>
 
           <h2 className="text-3xl font-bold" style={{ color: 'var(--primary)' }}>
-            Welcome to Crumb & Craft Homemade Goods
+            Welcome to Chelle's Homemade Goods
           </h2>
           <p style={{ color: 'var(--muted)' }}>We offer handcrafted cakes, desserts, and pasta in Commonwealth, Quezon City, serving customers across Metro Manila. Explore our freshly baked selections and choose a category below.</p>
         </header>

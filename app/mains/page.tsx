@@ -3,17 +3,17 @@ import MenuPageClient from '@/components/MenuPageClient';
 import { menuData } from '@/data/menuData';
 
 export const metadata: Metadata = {
-  title: 'Main Dish | Crumb & Craft',
+  title: "Main Dish | Chelle's",
   description: 'Our savory main dishes — seafood boils, ribs, roast beef and more.',
   openGraph: {
-    title: 'Main Dish | Crumb & Craft',
+    title: "Main Dish | Chelle's",
     description: 'Our savory main dishes — seafood boils, ribs, roast beef and more.',
-    url: 'https://crumbandcraft.net/mains',
-    siteName: 'Crumb & Craft',
+    url: 'https://chelles.net/mains',
+    siteName: "Chelle's",
     type: 'website',
     images: [
       {
-        url: 'https://crumbandcraft.net/menu/Hickory_Pork_Ribs-qc-quezoncity-commonwealth-manila.jpg',
+        url: 'https://chelles.net/menu/Hickory_Pork_Ribs-qc-quezoncity-commonwealth-manila.jpg',
         width: 1200,
         height: 630,
         alt: 'Hickory Ribs',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://crumbandcraft.net/mains',
+    canonical: 'https://chelles.net/mains',
   },
 };
 
@@ -29,7 +29,7 @@ export default function MainsPage() {
   const items = menuData.main_dish.map((it) => ({
     name: it.name,
     description: it.description || '',
-    image: it.image ? `https://crumbandcraft.net${it.image}` : undefined,
+    image: it.image ? `https://chelles.net${it.image}` : undefined,
     price: it.price ? it.price.replace(/[^0-9.]/g, '') : undefined,
   }));
 
