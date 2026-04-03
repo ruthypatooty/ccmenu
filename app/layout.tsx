@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -32,13 +32,18 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: '#D5E8E8',
+  colorScheme: 'light',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ backgroundColor: '#D5E8E8' }}>
       <head>
         <script
           type="application/ld+json"
@@ -78,6 +83,7 @@ export default function RootLayout({
         />
       </head>
       <body
+        style={{ backgroundColor: '#D5E8E8', color: '#0f2b30' }}
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}

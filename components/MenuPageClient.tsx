@@ -53,10 +53,10 @@ export default function MenuPageClient({ defaultTab }: Props) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/menu/newchelles.png" alt="Hero" className="w-full h-90 md:h-100 object-cover object-[center_30%]" />            <div className="absolute inset-0 pointer-events-none" style={{
               background: `
-                linear-gradient(to top,    var(--bg) 0%, transparent 15%),
-                linear-gradient(to bottom, var(--bg) 0%, transparent 15%),
-                linear-gradient(to left,   var(--bg) 0%, transparent 15%),
-                linear-gradient(to right,  var(--bg) 0%, transparent 15%)
+                linear-gradient(to top,    var(--bg, #D5E8E8) 0%, transparent 15%),
+                linear-gradient(to bottom, var(--bg, #D5E8E8) 0%, transparent 15%),
+                linear-gradient(to left,   var(--bg, #D5E8E8) 0%, transparent 15%),
+                linear-gradient(to right,  var(--bg, #D5E8E8) 0%, transparent 15%)
               `
             }} />
           </div>
