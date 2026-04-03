@@ -20,18 +20,16 @@
   --font-rounded: 'Quicksand', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #071e22;
-    --text: #dfeff0;
-    --card: rgba(20,40,44,0.7);
-  }
+/* Base */
+html {
+  background: var(--bg, #D5E8E8);
+  color-scheme: light;
 }
 
-/* Base */
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: var(--bg, #D5E8E8);
+  min-height: 100vh;
+  color: var(--text, #0f2b30);
   font-family: var(--font-rounded);
 }
 
