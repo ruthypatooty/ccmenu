@@ -51,7 +51,8 @@ export default function MenuPageClient({ defaultTab }: Props) {
         <header className="mb-6">
           <div className="relative overflow-hidden mb-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/menu/newchelles.png" alt="Hero" className="w-full h-90 md:h-100 object-cover object-[center_30%]" />            <div className="absolute inset-0 pointer-events-none" style={{
+            <img src="/menu/one.png" alt="Hero" className="w-full h-90 md:h-100 object-cover object-[center_54%]" />
+            <div className="absolute inset-0 pointer-events-none" style={{
               background: `
                 linear-gradient(to top,    var(--bg, #D5E8E8) 0%, transparent 15%),
                 linear-gradient(to bottom, var(--bg, #D5E8E8) 0%, transparent 15%),
