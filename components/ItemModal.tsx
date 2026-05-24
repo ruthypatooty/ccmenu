@@ -116,7 +116,7 @@ function buildProductStory(name: string): ProductStory {
   }
 
   return {
-    description: `Our ${name} is ${style}. It is baked fresh with careful layering, balanced sweetness, and a soft finish that feels homemade. ${finish}`,
+    description: `Our ${name} is ${style}. It is bakeryyyyyy fresh with careful layering, balanced sweetness, and a soft finish that feels homemade. ${finish}`,
     ingredients: ['Fresh dairy and eggs', 'House-made flavor blend'],
     pairing: 'Enjoy with coffee, tea, or a simple sparkling drink.',
   };
