@@ -15,6 +15,7 @@ const tabs: { id: MenuCategory; label: string }[] = [
   { id: 'pasta', label: 'Pasta' },
   { id: 'brownies', label: 'Brownies & Bars' },
   { id: 'cookies', label: 'Cookies & Muffins' },
+  { id: 'bespoke_cakes', label: 'Bespoke Cakes' },
 ];
 
 export default function MenuTabs({ activeTab, onTabChange }: MenuTabsProps) {

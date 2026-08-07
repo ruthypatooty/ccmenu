@@ -3,7 +3,7 @@ import MenuPageClient from '@/components/MenuPageClient';
 
 type Props = { searchParams?: Promise<{ category?: string }> };
 
-const validTabs = ['cakes','cheesecakes','cupcakes','brownies','cookies','main_dish','pasta'] as const;
+const validTabs = ['cakes','cheesecakes','cupcakes','brownies','cookies','main_dish','pasta','bespoke_cakes'] as const;
 
 const BASE = 'https://chelles.net';
 

@@ -14,16 +14,17 @@ export type MenuCategory =
   | 'brownies'
   | 'cookies'
   | 'main_dish'
-  | 'pasta';
+  | 'pasta'
+  | 'bespoke_cakes';
 
 export const menuData: Record<MenuCategory, MenuItem[]> = {
   cakes: [
     { name: 'Alcapone Vanilla Cake', price: '₱980.00', image: '/menu/Alcapone_Vanilla_Cake-qc-quezoncity-commonwealth-manila.png' },
-    { name: 'Baileys Irish Cream Cake with White Chocolate', price: '₱980.00', image: '/menu/Baileys_Irish_Cream_Cake_with_White_Chocolate-qc-quezoncity-commonwealth-manila.png' },
+    { name: 'Baileys Irish Cream Cake with White Chocolate', price: '₱1,150.00', image: '/menu/Baileys_Irish_Cream_Cake_with_White_Chocolate-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Black Forest Cake', price: '₱980.00', image: '/menu/Black_Forest_Cake-qc-quezoncity-commonwealth-manila.jpg' },
-    { name: 'Chocolate Pistachio Cake', price: '₱1,550.00', image: '/menu/Chocolate_Pistachio_Cake-qc-quezoncity-commonwealth-manila.jpg' },
+    { name: 'Chocolate Pistachio Cake', price: '₱1,600.00', image: '/menu/Chocolate_Pistachio_Cake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Chocolate Pistachio Cake (Junior)', price: '₱950.00', image: '/menu/Chocolate_Pistachio_Cake_(Junior)-qc-quezoncity-commonwealth-manila.jpg' },
-    { name: 'Caramel Honeycomb Crunch Cake', price: '₱880.00', image: '/menu/Caramel_Honeycomb_Crunch_Cake-qc-quezoncity-commonwealth-manila.jpg' },
+    { name: 'Caramel Honeycomb Crunch Cake', price: '₱950.00', image: '/menu/Caramel_Honeycomb_Crunch_Cake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Carrot Walnut Cake', price: '₱980.00', image: '/menu/Carrot_Walnut_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Classic Chocolate Cake', price: '₱980.00', image: '/menu/Classic_Chocolate_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Classic Mocha Cake', price: '₱880.00', image: '/menu/Classic_Mocha_Cake-qc-quezoncity-commonwealth-manila.png' },
@@ -31,9 +32,7 @@ export const menuData: Record<MenuCategory, MenuItem[]> = {
     { name: 'Classic Ube Macapuno Cake', price: '₱980.00', image: '/menu/Classic_Ube_Macapuno_Cake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Chocolate Truffle Cake with Strawberries', price: '₱1,150.00', image: '/menu/Chocolate_Truffle_Cake_with_Strawberries-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Espresso Walnut Praline Cake', price: '₱980.00', image: '/menu/Espresso_Walnut_Praline_Cake-qc-quezoncity-commonwealth-manila.png' },
-    { name: 'Ferrero Bueno Chocolate Cake', price: '₱2,550.00', image: '/menu/Ferrero_Bueno_Chocolate_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Fresh Berry Cream Cake', price: '₱1,250.00', image: '/menu/Fresh_Berry_Cream_Cake-qc-quezoncity-commonwealth-manila.png' },
-    { name: 'Fully Loaded Chocolate Cake', price: '₱1,500.00', image: '/menu/Fully_Loaded_Chocolate_Cake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Mango Cream Cake', price: '₱980.00', image: '/menu/Mango_Cream_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Mango Graham Mousse Cake', price: '₱880.00', image: '/menu/Mango_Graham_Mousse_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Mango Tres Leches Cake', price: '₱1,200.00', image: '/menu/Mango_Tres_Leches_Cake-qc-quezoncity-commonwealth-manila.png' },
@@ -41,19 +40,16 @@ export const menuData: Record<MenuCategory, MenuItem[]> = {
     { name: 'Red Velvet Cake', price: '₱950.00', image: '/menu/Red_Velvet_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: "S'mores Cake", price: '₱900.00', image: '/menu/Smores_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Salted Caramel Cake', price: '₱880.00', image: '/menu/Salted_Caramel_Cake-qc-quezoncity-commonwealth-manila.jpg' },
-    { name: 'Strawberry Cream Cake', price: '₱990.00', image: '/menu/Strawberry_Cream_Cake-qc-quezoncity-commonwealth-manila.png' },
+    { name: 'Strawberry Cream Cake', price: '₱1,100.00', image: '/menu/Strawberry_Cream_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Tiramisu', price: '₱1,200.00', image: '/menu/Tiramisu-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Tres Leches Cake', price: '₱1,300.00', image: '/menu/Tres_Leches_Cake-qc-quezoncity-commonwealth-manila.png' }
   ],
   cheesecakes: [
     { name: 'Banoffee Cheesecake', price: '₱980.00', image: '/menu/Banoffee_Cheesecake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Biscoff Cheesecake', price: '₱1,100.00', image: '/menu/Biscoff_Cheesecake-qc-quezoncity-commonwealth-manila.png' },
-    { name: 'Biscoff Cheesecake Minis', price: '₱850.00', image: '/menu/Biscoff_Cheesecake_Minis-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Blueberry Cheesecake', price: '₱980.00', image: '/menu/Blueberry_Cheesecake-qc-quezoncity-commonwealth-manila.png' },
-    { name: 'Blueberry Cheesecake Minis', price: '₱750.00', image: '/menu/Blueberry_Cheesecake_Minis-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Cookies and Cream Cheesecake', price: '₱980.00', image: '/menu/Cookies_and_Cream_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Fresh Berry Cheesecake', price: '₱1,250.00', image: '/menu/Fresh_Berry_Cheesecake-qc-quezoncity-commonwealth-manila.png' },
-    { name: 'Fresh Berry Cheesecake Minis', price: '₱890.00', image: '/menu/Fresh_Berry_Cheesecake_Minis-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Green Tea Latte Cheesecake', price: '₱980.00', image: '/menu/Green_Tea_Latte_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Limone Dolce Cheesecake', price: '₱980.00', image: '/menu/Limone_Dolce_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Strawberry Cheesecake', price: '₱980.00', image: '/menu/Strawberry_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' },
@@ -73,10 +69,10 @@ export const menuData: Record<MenuCategory, MenuItem[]> = {
   ],
   brownies: [
     { name: 'Cream Cheese Swirl Brownies', price: '₱450.00', image: '/menu/Cream_Cheese_Swirl_Brownies-qc-quezoncity-commonwealth-manila.jpg' },
-    { name: 'Dark Chocolate Brownies', price: '₱400.00', image: '/menu/Dark_Chocolate_Brownies-qc-quezoncity-commonwealth-manila.png' },
+    { name: 'Dark Chocolate Brownies', price: '₱450.00', image: '/menu/Dark_Chocolate_Brownies-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Four Shades of Fudge', price: '₱600.00', image: '/menu/Four_Shades_of_Fudge-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Revel Bars', price: '₱450.00', image: '/menu/Revel_Bars-qc-quezoncity-commonwealth-manila.jpg' },
-    { name: 'Walnut Brownies', price: '₱400.00', image: '/menu/Walnut_Brownies-qc-quezoncity-commonwealth-manila.jpg' }
+    { name: 'Walnut Brownies', price: '₱450.00', image: '/menu/Walnut_Brownies-qc-quezoncity-commonwealth-manila.jpg' }
   ],
   cookies: [
     { name: 'Chocolate Chip Cookies', price: '₱430.00', image: '/menu/Chocolate_Chip_Cookies-qc-quezoncity-commonwealth-manila.jpg' },
@@ -159,5 +155,12 @@ export const menuData: Record<MenuCategory, MenuItem[]> = {
       pairing: 'Pairs nicely with house iced tea or sparkling apple juice.',
       image: '/menu/Chelles_Special_Roast_Beef-qc-quezoncity-commonwealth-manila.jpg',
     },
+  ],
+  bespoke_cakes: [
+    {
+      name: 'Fully Loaded Chocolate Cake',
+      price: '',
+      image: '/menu/Fully_Loaded_Chocolate_Cake-qc-quezoncity-commonwealth-manila.jpg'
+    }
   ],
 };

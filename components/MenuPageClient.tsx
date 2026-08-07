@@ -13,6 +13,7 @@ const tabToUrl: Record<MenuCategory, string> = {
   pasta: '/pasta',
   brownies: '/desserts',
   cookies: '/desserts',
+  bespoke_cakes: '/bespoke-cakes',
 };
 
 type Props = { defaultTab: MenuCategory };
@@ -51,7 +52,8 @@ export default function MenuPageClient({ defaultTab }: Props) {
         <header className="mb-6">
           <div className="relative overflow-hidden mb-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/menu/one.png" alt="Hero" className="w-full h-90 md:h-100 object-cover object-[center_54%]" />
+            <img src="/menu/one.png" alt="Chelle's Logo" className="w-full max-w-4xl mx-auto h-64 md:h-80 object-contain"
+/>
             <div className="absolute inset-0 pointer-events-none" style={{
               background: `
                 linear-gradient(to top,    var(--bg, #D5E8E8) 0%, transparent 15%),
