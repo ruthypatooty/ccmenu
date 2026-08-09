@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import MenuPageClient from '@/components/MenuPageClient';
 
 export const metadata: Metadata = {
-  title: "Brownies, Bars & Cookies | Chelle's",
+  title: "Browniesd, Bars & Cookies | Chelle's",
   description: 'Indulge in our freshly baked brownies, bars, cookies and muffins — homemade goodness in every bite.',
   openGraph: {
     title: "Brownies, Bars & Cookies | Chelle's",
