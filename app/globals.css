@@ -1,0 +1,128 @@
+/* Google Fonts: a soft serif for headings and a rounded sans for UI */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Quicksand:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  /* Tints Color Palette */
+  --primary: #1F4D59; /* Submerged Teal */
+  --aqua-1: #B2D8D8; /* Pale Aqua */
+  --aqua-2: #70A4A4; /* Soft Teal */
+  --aqua-3: #A2BDBC; /* Misty Teal */
+  --bg: #D5E8E8; /* Faded Aqua */
+
+  --text: #0f2b30; /* dark text for readability */
+  --muted: #274e52;
+  --card: rgba(255,255,255,0.75);
+
+  /* fonts */
+  --font-serif: 'Playfair Display', serif;
+  --font-rounded: 'Quicksand', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Base */
+html {
+  background: var(--bg, #D5E8E8);
+  color-scheme: light;
+}
+
+body {
+  background: var(--bg, #D5E8E8);
+  min-height: 100vh;
+  color: var(--text, #0f2b30);
+  font-family: var(--font-rounded);
+}
+
+/* --- Typography specific rules requested --- */
+
+/* Main Header (chelles) — target the actual header h2 in the page */
+.hero header h2,
+.hero header h1 {
+  font-family: var(--font-serif);
+  font-weight: 300; /* light */
+  font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  color: var(--primary);
+  text-rendering: optimizeLegibility;
+}
+
+.hero header p {
+  font-family: var(--font-rounded);
+  font-weight: 300;
+  color: var(--muted);
+}
+
+/* Category Tabs — buttons rendered by MenuTabs live inside the .hero container
+   Use a selector that matches the container used in MenuTabs (flex wrapper).
+*/
+.hero .mx-auto > .flex > button {
+  font-family: var(--font-rounded);
+  font-weight: 400; /* light-medium */
+  font-size: 1rem;
+  padding: .55rem 1.1rem;
+  border-radius: 9999px;
+  background: var(--aqua-1);
+  color: var(--primary);
+  border: 1px solid rgba(15,59,61,0.06);
+  transition: background .18s ease, transform .12s ease;
+}
+.hero .mx-auto > .flex > button:hover {
+  background: rgba(15,59,61,0.06);
+  transform: translateY(-2px);
+}
+
+/* Keep active/selected feeling without changing component logic — the component sets inline styles for active state; ensure font stays rounded and medium weight */
+.hero .mx-auto > .flex > button[style],
+.hero .mx-auto > .flex > button:focus {
+  font-weight: 500;
+}
+
+/* Product Names and Price tags — target the structure used in MenuItem */
+.hero .p-4 .text-lg {
+  font-family: var(--font-rounded);
+  font-weight: 500; /* medium but soft */
+  font-size: 1.125rem;
+  color: var(--text);
+  margin-bottom: .25rem;
+}
+
+.hero .p-4 .text-sm.mt-1 {
+  font-family: var(--font-rounded);
+  font-weight: 300; /* light */
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .hero header h2 { font-size: 1.6rem; }
+  .hero .mx-auto > .flex > button { font-size: .95rem; padding: .5rem .9rem; }
+  .hero .p-4 .text-lg { font-size: 1.05rem; }
+}
+
+/* Small utility: make sure images and cards keep the soft vibe */
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,43,48,0.06);
+}
+
+@keyframes fadeIn {
+   from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+   from { opacity: 1; }
+   to { opacity: 0; }
+ }
+
+@keyframes modalOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}
