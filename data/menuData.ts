@@ -42,7 +42,8 @@ export const menuData: Record<MenuCategory, MenuItem[]> = {
     { name: 'Salted Caramel Cake', price: '₱880.00', image: '/menu/Salted_Caramel_Cake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Strawberry Cream Cake', price: '₱1,100.00', image: '/menu/Strawberry_Cream_Cake-qc-quezoncity-commonwealth-manila.png' },
     { name: 'Tiramisu', price: '₱1,200.00', image: '/menu/Tiramisu-qc-quezoncity-commonwealth-manila.jpg' },
-    { name: 'Tres Leches Cake', price: '₱1,300.00', image: '/menu/Tres_Leches_Cake-qc-quezoncity-commonwealth-manila.png' }
+    { name: 'Tres Leches Cake', price: '₱1,300.00', image: '/menu/Tres_Leches_Cake-qc-quezoncity-commonwealth-manila.png' },
+    { name: 'Chocolate Mousse Cake', price: '₱900.00', image: '/menu/Chocolate_Mousse_Cake-qc-quezoncity-commonwealth-manila.png' }
   ],
   cheesecakes: [
     { name: 'Banoffee Cheesecake', price: '₱980.00', image: '/menu/Banoffee_Cheesecake-qc-quezoncity-commonwealth-manila.png' },
@@ -53,7 +54,9 @@ export const menuData: Record<MenuCategory, MenuItem[]> = {
     { name: 'Green Tea Latte Cheesecake', price: '₱980.00', image: '/menu/Green_Tea_Latte_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Limone Dolce Cheesecake', price: '₱980.00', image: '/menu/Limone_Dolce_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' },
     { name: 'Strawberry Cheesecake', price: '₱980.00', image: '/menu/Strawberry_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' },
-    { name: 'Ube Macapuno Cheesecake', price: '₱980.00', image: '/menu/Ube_Macapuno_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' }
+    { name: 'Ube Macapuno Cheesecake', price: '₱980.00', image: '/menu/Ube_Macapuno_Cheesecake-qc-quezoncity-commonwealth-manila.jpg' },
+    { name: 'Calamansi Cheescake', price: '₱980.00', image: '/menu/Calamansi_Cheescake-qc-quezoncity-commonwealth-manila.png' },
+    { name: 'Matcha White Chocolate Cheescake', price: '₱980.00', image: '/menu/Matcha_White_Chocolate_Cheescake-qc-quezoncity-commonwealth-manila.png' }
   ],
   cupcakes: [
     { name: 'Brazo Cups', price: '₱580.00', image: '/menu/Brazo_Cups-qc-quezoncity-commonwealth-manila.jpg' },

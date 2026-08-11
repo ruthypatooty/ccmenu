@@ -16,6 +16,7 @@ export default function ItemModal({
 }: ItemModalProps) {
   const [zoomed, setZoomed] = useState(false);
   const [optionsOpen, setOptionsOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
 
   const optionsRef = useRef<HTMLDivElement | null>(null);
 
@@ -50,6 +51,18 @@ export default function ItemModal({
     };
   }, []);
 
+   useEffect(() => {
+     if (isOpen) setClosing(false);
+   }, [isOpen]);
+
+  function handleClose() {
+    setClosing(true);
+    setTimeout(() => {
+      setClosing(false);
+      onClose();
+    }, 150);
+  }
+
   if (!isOpen) return null;
 
   return (
@@ -59,13 +72,21 @@ export default function ItemModal({
     >
       {/* Dark overlay */}
       <div
-        className="absolute inset-0 bg-black/50"
-        onClick={onClose}
+        className={`absolute inset-0 bg-black/50 ${
+           closing
+             ? "animate-[fadeOut_0.15s_ease-out]"
+             : "animate-[fadeIn_0.15s_ease-out]"
+         }`}
+         onClick={handleClose}
       />
 
       {/* MODAL */}
       <div
-        className="relative z-50 flex h-[68vh] w-[70vw] max-w-xl overflow-hidden rounded-lg shadow-lg"
+        className={`relative z-50 flex h-[85vh] w-[92vw] sm:h-[68vh] sm:w-[70vw] max-w-xl overflow-hidden rounded-lg shadow-lg ${
+           closing
+             ? "animate-[modalOut_0.15s_ease-out]"
+             : "animate-[modalIn_0.18s_ease-out]"
+         }`}
         style={{
           backgroundImage: `url('/MODALBG1.jpg')`,
           backgroundSize: "cover",
@@ -114,7 +135,7 @@ export default function ItemModal({
           {/* CLOSE BUTTON */}
           <button
             aria-label="Close"
-            onClick={onClose}
+            onClick={handleClose}
             className="absolute top-4 left-4 z-30 rounded-full p-3 bg-[#ebe3d1] hover:bg-[#dfd6c4] text-black"
           >
             ✕
@@ -122,7 +143,7 @@ export default function ItemModal({
 
           {/* BOTTOM PRODUCT INFORMATION */}
           <div
-            className="absolute bottom-0 left-0 right-0 z-20 p-5 md:p-7"
+            className="absolute bottom-0 left-0 right-0 z-20 p-4 sm:p-5 md:p-7"
             style={{
               backgroundImage: `url('/MODALBG1.jpg')`,
               backgroundSize: "cover",
@@ -143,12 +164,12 @@ export default function ItemModal({
             <div className="relative z-10">
 
               {/* PRODUCT NAME + INQUIRY */}
-              <div className="flex items-end justify-between gap-5">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-5">
 
                 {/* Name + Price */}
                 <div>
                   <h3
-                    className="text-3xl md:text-4xl font-light leading-tight"
+                    className="text-2xl sm:text-3xl md:text-4xl font-light leading-tight"
                     style={{
                       fontFamily: "var(--font-serif)",
                       color: "white",
@@ -158,7 +179,7 @@ export default function ItemModal({
                   </h3>
 
                   <div
-                    className="mt-1 text-[1.5rem] md:text-[1.8rem]"
+                    className="mt-1 text-[1.25rem] sm:text-[1.5rem] md:text-[1.8rem]"
                     style={{
                       fontFamily: "var(--font-rounded)",
                       color: "white",
@@ -172,7 +193,7 @@ export default function ItemModal({
                 {/* SEND INQUIRY */}
                 {isMobile ? (
                   <div
-                    className="relative inline-block shrink-0"
+                    className="relative inline-block shrink-0 self-start sm:self-auto"
                     ref={optionsRef}
                   >
                     <button
@@ -181,7 +202,7 @@ export default function ItemModal({
                       }
                       aria-haspopup="true"
                       aria-expanded={optionsOpen}
-                      className="inline-block rounded-full px-5 py-3 font-medium shadow-sm bg-white"
+                      className="inline-block rounded-full px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base font-medium shadow-sm bg-white whitespace-nowrap"
                       style={{
                         fontFamily: "var(--font-rounded)",
                         color: "var(--primary)",

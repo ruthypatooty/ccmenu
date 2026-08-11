@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import FloatingContactButton from "@/components/FloatingButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -87,6 +88,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <FloatingContactButton />
       </body>
     </html>
   );
